@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl1RQ7rB60dynJuZ7cslO8k-RbmrkDFOk&callback=initMap">
+    </script>
+<script type="text/javascript">
+  function codeAddress() {
+   var geocoder = new google.maps.Geocoder();
+
+    var address = document.getElementById("address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        //alert(results[0].geometry.location.lat());
+        //alert(results[0].geometry.location.lng());
+        document.getElementById("lat").value = results[0].geometry.location.lat();
+        document.getElementById("lng").value = results[0].geometry.location.lng();
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+
+</script>
+
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-inverse">
+    	<div class="'navbar-header">
+        	<a class="navbar-brand" href="#">부동산</a>
+        </div>
+        <div class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav">
+            	<li><a href="apt.html">아파트별 예측<span class="sr-only">(current)</span></a></li>
+            	<li><a href="gu.html">구별 예측</a></li>
+                <li><a href="#">연구과제</a></li>
+            </ul>
+        
+				<div>   			
+                    <input id="address" type="text" value="" >
+                    <input type="button" value="경도/위도 계산" onclick="codeAddress()">
+                </div>
+                <div>
+			    	<input id="lat" type="text" value="">
+			    	<input id="lng" type="text" value="">
+			  </div>
+  
+		</div>
+    </nav>
+
+	<div class="container">
+
+    </div>
+	<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+	<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>
