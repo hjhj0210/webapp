@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri May 10 18:32:57 KST 2019
+junit-4.12-sources.jar>SpringPlugins=
+junit-4.12.jar>Spring\ Plugins=
+junit-4.12.pom>Spring\ Plugins=
+junit-4.12.pom>SpringPlugins=
+junit-4.12.jar>central=
+junit-4.12.jar>SpringPlugins=
+junit-4.12.pom>central=

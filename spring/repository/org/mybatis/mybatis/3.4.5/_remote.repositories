@@ -1,0 +1,7 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Feb 07 14:09:39 KST 2019
+mybatis-3.4.5.jar>Spring\ Plugins=
+mybatis-3.4.5.pom>Spring\ Plugins=
+mybatis-3.4.5-sources.jar>SpringPlugins=
+mybatis-3.4.5.pom>SpringPlugins=
+mybatis-3.4.5.jar>SpringPlugins=
